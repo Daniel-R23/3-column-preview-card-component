@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+    *{
+      --laranja: hsl(31,77%,52%);
+      --azul: hsl(184,100%,22%);
+      --verde: hsl(179,100%,13%);
+      --branco-transp: hsla(0, 0%, 100%, 0.75);
+      --cinza-claro: hsl(0, 0%, 95%);
+    }
+    body{
+      margin:0;
+      padding:0;
+      font-size: 15px;
+      background-color: var(--cinza-claro);
+    }
+    .container{
+      display: inline-flex;
+      flex-wrap: nowrap;
+      position:absolute;
+      width: 900px;
+      height:500px;
+      left:50%;
+      top:50%;
+      margin-left:-450px;
+      margin-top: -250px;
+    }
+    .item{
+      width:300px;
+      height: auto;
+      padding:50px 40px 0px 50px;
+    }
+    .item:nth-child(1){
+      border-radius: 8px 0px 0px 8px;
+      background-color: var(--laranja)
+    }
+    .item:nth-child(2){
+      background-color: var(--azul)
+    }
+    .item:nth-child(3){
+      border-radius: 0px 8px 8px 0px;
+      background-color:var(--verde);
+    }
+    .item>h1{
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 700;
+      color:var(--cinza-claro);
+      text-transform: uppercase;
+      font-size:40px;
+      margin-top:30px;
+    }
+    .item>p{
+      padding-top:10px;
+      padding-bottom:60px;
+      font-family: 'Lexend Deca', sans-serif;
+      line-height: 1.7;
+      font-weight: 400;
+      color: var(--branco-transp);
+    }
+    .btn{
+      background-color: var(--cinza-claro);
+      font-family: 'Lexend Deca', sans-serif;
+      font-weight: 400;
+      border:none;
+      padding: 15px 35px 15px 35px;
+      border-radius:50px;
+    }
+    .btn:active{
+      border:1px solid var(--branco-transp);
+      background-color: transparent;
+      color:var(--branco-transp)!important;
+    }
+    .item:nth-child(1)>button{
+      color:var(--laranja);
+    }
+    .item:nth-child(2)>button{
+      color:var(--azul);
+    }
+    .item:nth-child(3)>button{
+      color:var(--verde);
+    }
+    @media screen and (max-width:375px){
+      .container{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 1300px;
+        margin-left:-150px;
+        top:50%;
+        margin-top:-650px;
+        justify-content: center;
+        align-items: center;
+      }
+      .item{
+        width:230px;
+        height: 420px;
+      }
+      .item>h1{
+        margin-top:30px;
+      }
+      .item:nth-child(1){
+        border-radius: 8px 8px 0px 0px;
+      }
+      .item:nth-child(3){
+        border-radius: 0px 0px 8px 8px;
+      }
+      .item>p{
+        padding-bottom:10px;
+        padding-right:10px;
+
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">
+      <img src="images/icon-sedans.svg" alt="sedans">
+      <h1>Sedans</h1>
+      <p>Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
+      or on your next road trip.</p>
+      <button class="btn">Learn More</button>
+    </div>
+    <div class="item">
+      <img src="images/icon-suvs.svg" alt="suvs">
+      <h1>SUVs</h1>
+      <p>Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
+      and off-road adventures.</p>
+      <button class="btn">Learn More</button>
+    </div>
+    <div class="item">
+      <img src="images/icon-luxury.svg" alt="luxury">
+      <h1>Luxury</h1>
+      <p>Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
+      rental and arrive in style.</p>
+      <button class="btn">Learn More</button>
+    </div>
+  </div>
+  <!--<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+-->
+</body>
+</html>
